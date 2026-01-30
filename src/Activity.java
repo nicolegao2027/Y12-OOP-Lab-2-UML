@@ -5,7 +5,6 @@ public class Activity {
     private String description;
     private double cost;
     private int capacity;
-    private int signedUp;
     private ArrayList<Passenger> passengers;
 
     public Activity(String name, String description, double cost, int capacity) {
@@ -16,16 +15,16 @@ public class Activity {
         passengers=new ArrayList<>();
     }
 
+    public void addPassenger(Passenger p){
+        passengers.add(p);
+    }
+
     public ArrayList<Passenger> getPassengers() {
         return passengers;
     }
 
     public void setPassengers(ArrayList<Passenger> passengers) {
         this.passengers = passengers;
-    }
-
-    public void addPassenger(Passenger p){
-        passengers.add(p);
     }
 
     public String getName() {
@@ -58,13 +57,5 @@ public class Activity {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
-    }
-
-    public int getSignedUp() {
-        return signedUp;
-    }
-
-    public void setSignedUp(int signedUp) {
-        this.signedUp = signedUp;
     }
 }
