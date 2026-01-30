@@ -52,21 +52,21 @@ public class Main {
         cruiseShip.addPassenger(passenger4);
 
         // Alice signs up for Eiffel Tower (standard passenger, full price)
-        passenger1.signUpForActivity(eiffelTower);
+        passenger1.signUpForActivity(eiffelTower, paris);
 
         // Bob signs up for Colosseum (senior passenger, 10% discount)
-        passenger2.signUpForActivity(colosseum);
+        passenger2.signUpForActivity(colosseum, rome);
 
         // Charlie signs up for multiple activities (premium passenger, free)
-        passenger3.signUpForActivity(eiffelTower);
+        passenger3.signUpForActivity(eiffelTower, paris);
 
-        passenger3.signUpForActivity(romeTheatre);
+        passenger3.signUpForActivity(romeTheatre, rome);
 
         // Diana tries to sign up for an activity but doesn't have enough balance
-        passenger4.signUpForActivity(eiffelTower);
+        passenger4.signUpForActivity(eiffelTower, paris);
 
         // Diana signs up for a cheaper activity
-        passenger4.signUpForActivity(parisWalkingTour);
+        passenger4.signUpForActivity(parisWalkingTour, paris);
 
         // Print itinerary
         cruiseShip.printItinerary();
